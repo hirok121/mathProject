@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Differential Equation Solver</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Differential Equation Solver</title>
+
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <script src="../static/js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Mooli&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="div1">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">User Manual</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <span
+        class="navbar"
+        style="font-size: 30px; cursor: pointer"
+        onclick="openNav()"
+        >&#9776;</span
+      >
+
+      <br />
+      <br />
+
+      <div class="WelcomeSection">
+         <h1 class="h11">Welcome To Our Program</h1>
+         <br />
+         <br />
+         <h1 class="h22">Differential Equation Solver</h1>
+         <p class="intro">
+            <button class="buttonDeafult" type="button" onclick="toggleDivs()">
+               Click To Start
+            </button>
+         </p>
+      </div>
+    </div>
+
+    <div class="div2 hidden" id="div2">
+      <button
+        class="cross"
+        title="Close"
+        type="button"
+        onclick="backtostart();solveAnother();f2();f1();"
+      >
+        X
+      </button>
+
+      <p></p>
+      <form class="solveform" id="solveforms" action="" target="_blank">
+        <label for="dx">Enter seperable O.D.E function :</label>
+        <br /><br />
+        <input
+          type="text"
+          id="dx"
+          name="dx"
+          placeholder="E.g:  M(x,y)dx + N(x,y)dy = 0"
+          autofocus
+        />
+        <br />
+
+        <button
+          class="buttonDeafult"
+          id="cnd"
+          onclick="handleButtonClick(event)"
+        >
+          With Initial Condition
+        </button>
+
+        <br />
+        <div id="xy">
+          <label class="xLabel" for="x">X :</label>
+          <input type="text" id="x" name="x" placeholder="x" />
+          <label class="yLabel" for="y">Y :</label>
+          <input type="text" id="y" name="y" placeholder="y" />
+        </div>
+
+        <button
+          type="button"
+          class="buttonDeafult"
+          id="resetForm"
+          onclick="solveAnother()"
+        >
+          Clear Equation
+        </button>
+        <button
+          class="buttonDeafult"
+          id="solve"
+          type="submit"
+        >
+          Solve
+        </button>
+      </form>
+      <br />
+      <!--  -->
+      <br />
+    </div>
+
+    <div class="div3" id="div3">
+      <p class="div3p1">Our program is awaiting your confirmation</p>
+      <p class="div3p2">
+        Click the button to proceed<br />
+        <!-- <span style="font-size:50px;">...</span> -->
+      </p>
+
+      <div class="container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </body>
+</html>
